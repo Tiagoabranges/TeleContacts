@@ -1,16 +1,14 @@
-# ⭐ Lista Telefônica Full Stack - "TeleContacts"
 
 
+<h1 align="center">📞 Lista Telefônica Full Stack - TeleContacts</h1>
 
-# 💻 Descrição
-<p align="center">TeleContacts é uma aplicação de Lista Telefônica Full Stack que oferece funcionalidades completas para gerenciar seus contatos e seus números de telefone. Ela permite que os usuários realizem operações de CRUD (Criar, Ler, Atualizar, Excluir) para manter seus contatos organizados. O projeto é construído com tecnologias modernas e poderosas, incluindo NestJS no backend e ReactJS no frontend.</p>
+<p align="center">
+  <strong>TeleContacts</strong> é uma aplicação de Lista Telefônica Full Stack que oferece funcionalidades completas para gerenciar seus contatos e seus números de telefone. Ela permite que os usuários realizem operações de <strong>CRUD</strong> (Criar, Ler, Atualizar, Excluir) para manter seus contatos organizados.
+</p>
 
-
-# 📥 Instruções de uso
-Para ver como funciona a api, recomendo usar insomina, postman ou qualquer outro Api Client de sua preferência.
-
-
-
+<p align="center">
+  O projeto é construído com tecnologias modernas e poderosas, incluindo <strong>NestJS</strong> no backend e <strong>ReactJS</strong> no frontend.
+</p>
 
 # 🚀 Como executar o projeto
 
