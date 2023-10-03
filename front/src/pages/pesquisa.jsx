@@ -36,6 +36,21 @@ const PesquisaContatos = () => {
       });
   };
 
+  const editarContato = (id, data) => {
+    
+    const {valorNome:nome, valorIdade:idade} = data;
+    const formatData = {nome,idade: Number(idade)}
+    console.log(formatData);
+    axios
+      .put(`http://localhost:3000/contato/${id}`, formatData)
+      .then(() => {
+        console.log("editou");
+      })
+      .catch((error) => {
+        console.error("Ocorreu um erro ao editar o contato:", error);
+      });
+  };
+
   return (
     <div className="pesquisa-contatos">
       <Link to="/">
@@ -62,17 +77,22 @@ const PesquisaContatos = () => {
       <div>
         <h3>Resultados da Pesquisa:</h3>
         <ul>
-          {resultadosFiltrados.map((value) => (<>
-         {  console.log(value.numeros[0])}
-            <Card
-
-              key={value.id}
-              idade={value.idade}
-              nome={value.nome}
-             
-              excluirContato={() => excluirContato(value.id)}
-            />
-         </> ))}
+          {resultadosFiltrados.map((value) => (
+            <>
+              {console.log(value.numeros[0])}
+              <Card
+                editarContato={editarContato}
+                id={value.id}
+                key={value.id}
+                idade={value.idade}
+                nome={value.nome}
+                numero={
+                  value.numeros.length !== 0 ? value.numeros[0].numero : ""
+                }
+                excluirContato={() => excluirContato(value.id)}
+              />
+            </>
+          ))}
         </ul>
       </div>
     </div>
