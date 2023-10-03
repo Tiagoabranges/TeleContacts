@@ -29,7 +29,7 @@ Para ver como funciona a api, recomendo usar insomina, postman ou qualquer outro
   
 ### Back end
 
-  1. Altere os dados do banco postgres no arquivo `.env` e remova a extensao exemple
+  1. Altere os dados do banco postgres no arquivo `.env` e remova a extensao example
   2. `$ cd back`
   3. `$ npm install`
   4. `$ npm run start:dev`
