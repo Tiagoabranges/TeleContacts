@@ -1,41 +1,46 @@
-/* eslint-disable react/prop-types */
-import  { useState, useEffect } from 'react';
-import { Link } from 'react-router-dom';
-import axios from 'axios';
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import axios from "axios";
+import { filtrarContatosPorNomeOuNumero } from "../utils";
+import { Card } from "../components/Card/Card";
 
 const PesquisaContatos = () => {
-  const [pesquisa, setPesquisa] = useState('');
+  const [pesquisa, setPesquisa] = useState("");
   const [data, setData] = useState([]);
+  const [resultadosFiltrados, setResultadosFiltrados] = useState([]);
 
   useEffect(() => {
-    // Faz a solicitação GET para a API
-    axios.get('http://localhost:3000/contato')
-      .then(response => {
-        // Define os dados da resposta no estado
+    axios
+      .get("http://localhost:3000/contato")
+      .then((response) => {
         setData(response.data);
       })
-      .catch(error => {
-        console.error('Ocorreu um erro ao buscar dados da API:', error);
+      .catch((error) => {
+        console.error("Ocorreu um erro ao buscar dados da API:", error);
       });
   }, []);
-  console.log(data);
-  const handlePesquisar = () => {
-    // Filtrar os contatos com base na pesquisa (nome ou telefone)
-    const resultadosFiltrados = data.filter((contato) => {
-      const numero = contato.numero || ''; // Usar uma string vazia se o número for undefined
-      return (
-        contato.nome.toLowerCase().includes(pesquisa.toLowerCase()) ||
-        numero.includes(pesquisa)
-      );
-    });
-  
-    // Definir os resultados da pesquisa no estado
-    setData(resultadosFiltrados);
+
+  useEffect(() => {
+    setResultadosFiltrados(filtrarContatosPorNomeOuNumero(data, pesquisa));
+  }, [data, pesquisa]);
+
+  const excluirContato = (id) => {
+    axios
+      .delete(`http://localhost:3000/contato/${id}`)
+      .then(() => {
+        const contatosAtualizados = data.filter((contato) => contato.id !== id);
+        setData(contatosAtualizados);
+      })
+      .catch((error) => {
+        console.error("Ocorreu um erro ao excluir o contato:", error);
+      });
   };
 
   return (
     <div className="pesquisa-contatos">
-        <Link to="/"><button>voltar</button></Link>
+      <Link to="/">
+        <button>voltar</button>
+      </Link>
       <h2>Pesquisar Contatos</h2>
       <div>
         <input
@@ -44,23 +49,30 @@ const PesquisaContatos = () => {
           value={pesquisa}
           onChange={(e) => setPesquisa(e.target.value)}
         />
-        <button onClick={handlePesquisar}>Pesquisar</button>
+        <button
+          onClick={() =>
+            setResultadosFiltrados(
+              filtrarContatosPorNomeOuNumero(data, pesquisa)
+            )
+          }
+        >
+          Pesquisar
+        </button>
       </div>
       <div>
         <h3>Resultados da Pesquisa:</h3>
         <ul>
-          {data.map((contato, index) => (
-            <li key={index}>
-              Nome: {contato.nome}, Idade: {contato.idade},Telefones:
-      <ul>
-        {contato.numeros.map((numero, numeroIndex) => (
-          <li key={numeroIndex}>{numero.numero}</li>
-        ))}
-      </ul><button id='editar'>Editar</button>
-      <button id='excluir'>excluir</button>
-            </li>
-          ))}
+          {resultadosFiltrados.map((value) => (<>
+         {  console.log(value.numeros[0])}
+            <Card
 
+              key={value.id}
+              idade={value.idade}
+              nome={value.nome}
+             
+              excluirContato={() => excluirContato(value.id)}
+            />
+         </> ))}
         </ul>
       </div>
     </div>
