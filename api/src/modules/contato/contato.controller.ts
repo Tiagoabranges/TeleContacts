@@ -4,8 +4,8 @@ import {
   Delete,
   Get,
   Param,
-  Patch,
   Post,
+  Put,
 } from '@nestjs/common';
 import { ContatoService } from './contato.service';
 import { ContatoDto } from './contato.dto';
@@ -23,7 +23,7 @@ export class ContatoController {
     return this.contatoService.findAll();
   }
 
-  @Patch(':id')
+  @Put(':id')
   update(@Param('id') id: string, @Body() data: ContatoDto) {
     return this.contatoService.update(id, data);
   }
