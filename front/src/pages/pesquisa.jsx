@@ -56,9 +56,11 @@ const PesquisaContatos = () => {
         {contato.numeros.map((numero, numeroIndex) => (
           <li key={numeroIndex}>{numero.numero}</li>
         ))}
-      </ul>
+      </ul><button id='editar'>Editar</button>
+      <button id='excluir'>excluir</button>
             </li>
           ))}
+
         </ul>
       </div>
     </div>
