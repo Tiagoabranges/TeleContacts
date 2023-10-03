@@ -36,27 +36,29 @@ Para ver como funciona a api, recomendo usar insomina, postman ou qualquer outro
 
 ```
 
-# Tecnologias Utilizadas
+# :books: Tecnologias Utilizadas
 
 Backend
-* NestJS: Um framework Node.js eficiente para construir aplicativos escaláveis.
-* PostgreSQL: Um banco de dados relacional robusto para armazenar dados de contatos.
-* Prisma: Um ORM (Object-Relational Mapping) que simplifica a interação com o banco de dados.
-* Docker: Para criar e gerenciar containers do PostgreSQL.
-* ESLint: Ferramenta para padronizar o estilo de código JavaScript/TypeScript.
-* CORS: Middleware para habilitar comunicação entre o frontend e o backend.
-* Node.js: A plataforma de tempo de execução JavaScript utilizada no servidor.
-* Git: Sistema de controle de versão para rastreamento de alterações de código.
-* Prettier: Ferramenta para manter um estilo de código consistente e bem formatado.
+ 
++ `NestJS` Um framework Node.js eficiente para construir aplicativos escaláveis.
++ `PostgreSQL` Um banco de dados relacional robusto para armazenar dados de contatos.
++ `Prisma` Um ORM (Object-Relational Mapping) que simplifica a interação com o banco de dados.
++ `Docker` Para criar e gerenciar containers do PostgreSQL.
++ `ESLint` Ferramenta para padronizar o estilo de código JavaScript/TypeScript.
++ `CORS` Middleware para habilitar comunicação entre o frontend e o backend.
++ `Node`: A plataforma de tempo de execução JavaScript utilizada no servidor.
++ `Git` Sistema de controle de versão para rastreamento de alterações de código.
++ `Prettier` Ferramenta para manter um estilo de código consistente e bem formatado.
 
 Frontend
-* ReactJS: Biblioteca JavaScript para construir interfaces de usuário interativas.
-* HTML/CSS: Linguagens padrão da web para estruturar e estilizar a interface.
-* Axios: Cliente HTTP para realizar chamadas de API para o backend.
+
++ `ReactJS` Biblioteca JavaScript para construir interfaces de usuário interativas.
++ `HTML/CSS` Linguagens padrão da web para estruturar e estilizar a interface.
++ `Axios` Cliente HTTP para realizar chamadas de API para o backend.
 
   
 
-# Contribuições
+#  :thumbsup: Contribuições
 Contribuições são bem-vindas! Sinta-se à vontade para criar issues, pull requests ou sugerir melhorias para este projeto.
 
 # 🐛 Encontrou um problema?
