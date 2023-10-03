@@ -22,7 +22,15 @@ export class ContatoService {
   }
 
   async findAll() {
-    return this.prisma.contato.findMany();
+    return this.prisma.contato.findMany({
+      include: {
+        numeros: {
+          select: {
+            numero: true,
+          },
+        },
+      },
+    });
   }
 
   async update(id: string, data: ContatoDto) {
