@@ -1,6 +1,13 @@
 import { useState } from "react";
 
-export function Card({ nome, idade, numero, excluirContato }) {
+export function Card({
+  nome,
+  idade,
+  numero,
+  excluirContato,
+  editarContato,
+  id,
+}) {
   const [valorNome, setValorNome] = useState(nome);
   const [valorIdade, setValorIdade] = useState(idade);
   const [valorNumero, setValorNumero] = useState(numero);
@@ -25,7 +32,7 @@ export function Card({ nome, idade, numero, excluirContato }) {
         value={valorIdade}
       />
       <input
-        disabled={modoEditar}
+        disabled
         type="text"
         onChange={({ target }) => {
           setValorNumero(target.value);
@@ -34,6 +41,17 @@ export function Card({ nome, idade, numero, excluirContato }) {
       />
       <button onClick={() => setModoEditar(!modoEditar)}>Editar</button>
       <button onClick={excluirContato}>Excluir</button>
+      {!modoEditar && (
+        <button
+          onClick={() =>{
+            setModoEditar(!modoEditar)
+            editarContato(id, { valorIdade, valorNome })
+        }}
+            
+        >
+          Salvar
+        </button>
+      )}
     </div>
   );
 }
