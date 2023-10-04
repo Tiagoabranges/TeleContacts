@@ -1,6 +1,12 @@
 * {
   font-family: 'Cursive', cursive; /* Altera a fonte para uma fonte mais rústica */
 }
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Impede a rolagem vertical */
+}
 
 .pesquisa-contatos input {
   margin-right: 5px;
@@ -25,10 +31,10 @@
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-
+    margin-left: 78vh;
     padding: 7px 15px;
   }
-  
+ 
   #voltar {
     margin-top: 11px;
     margin-left: 11px;
@@ -62,7 +68,7 @@
 
 /* Estilize o botão quando o mouse passar por cima */
 #back-button:hover {
-  background-color: #dc141478;
+  background-color: #a313139b;
   transition: background-color 0.3s ease; /* Efeito de transição suave na cor de fundo */
   transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
 }
@@ -117,6 +123,7 @@
   background-color: #d6d6d7ae;
 
 }
+
 #pesquisa-por-nome:hover {
   border-color: #3628ff; /* Cor da borda amarela no hover */
 }
@@ -127,11 +134,13 @@
 }
 #pesquisa-por-nome {
   transition: border-color 0.3s ease;
+  color: #0e0d0d9c;
+  width: 70vh;
 }
 
 /* Estilize o botão de pesquisa */
 #botao-pesquisa {
-
+  margin-left: 2px;
  font-family: 'Cursive', cursive;
     background-color: #867fd4;
     color: white;
@@ -174,4 +183,12 @@
   border: 1px solid #ddd; /* Borda leve ao redor do Card */
   border-radius: 5px; /* Bordas arredondadas do Card */
 }
+
+
+
+#atualizar {
+  position: relative;
+  margin-left: 78vh;
+}
+
 

@@ -4,6 +4,7 @@ import axios from "axios";
 import { filtrarContatosPorNomeOuNumero } from "../utils";
 import { Card } from "../components/Card/Card";
 import './pesquisa.css';
+import RefreshButton from "../components/RefreshButton";
 
 const PesquisaContatos = () => {
   const [pesquisa, setPesquisa] = useState("");
@@ -76,6 +77,7 @@ const PesquisaContatos = () => {
         >
           Pesquisar
         </button>
+        <RefreshButton id="atualizar" />
       </div>
       <div className="resultado">
         <h3>Resultados da Pesquisa:</h3>

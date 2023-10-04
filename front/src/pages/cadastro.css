@@ -93,21 +93,37 @@ body {
   }
 
   .redes {
+    transition: background-color 0.3s ease; /* Efeito de transição suave na cor de fundo */
     margin-top: 27px;
     display: flex;
     justify-content: space-evenly;
   }
+  
 
   #git {
     color: #160404e0;
   }
 
+  #git:hover {
+    color: #636368;
+      transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+    }
   
   #insta {
     color: #a839a1e0;
   }
 
+  #insta:hover {
+    color: #bd6ce3;
+      transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+    }
+
   
   #linkedin {
     color: #1960dbe0;
   }
+
+  #linkedin:hover {
+    color: #129fe6;
+      transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+    }
