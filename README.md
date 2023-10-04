@@ -30,8 +30,7 @@
   1. Altere os dados do banco postgres no arquivo `.env` e remova a extensao example
   2. `$ cd back`
   3. `$ npm install`
-  4. `$ npx prisma migrate dev --name init`
-  5. `$ npm run start:dev`
+  4. `$ npm run start:dev`
 
 ```
 
