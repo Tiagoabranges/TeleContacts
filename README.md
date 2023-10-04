@@ -26,10 +26,15 @@
   3. `$ npm run dev`
   
 ### Back end
+voce pode utilizar um container docker para rodar o seu banco de dados postgres
 
-  1. Altere os dados do banco postgres no arquivo `.env` e remova a extensao example
-  2. `$ cd back`
-  3. `$ npm install`
+`docker run -d --name postgres -p 5432:5432 -e POSTGRES_PASSWORD=sua-senha -v pgdata:/var/lib/postgresql/data postgres`
+
+Altere os dados do banco postgres no arquivo `.env` e remova a extensao example
+
+  1. `$ cd back`
+  2. `$ npm install`
+  3. `$ npx prisma generate` para criar as tabelas no banco
   4. `$ npm run start:dev`
 
 ```
