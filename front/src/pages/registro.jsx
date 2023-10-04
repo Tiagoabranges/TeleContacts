@@ -1,6 +1,9 @@
 import axios from 'axios';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import Button from '@mui/material/Button';
+import './cadastro.css'
+import {AiOutlineInstagram, AiOutlineLinkedin, AiOutlineGithub} from 'react-icons/ai'
 
 // eslint-disable-next-line react/prop-types
 const CadastroContatos = () => {
@@ -43,10 +46,11 @@ setIsLoading(false);
 }
 
   return (
-    <div className="cadastro-contatos">
+    <div className="container">
+      <h1 id='title'>Telecontacts</h1>
       <h2>Cadastrar Contato</h2>
-      {error && <div className="error-message">{error}</div>}
-      <div>
+      {error && <p className="error-message">{error}</p>}
+      <div className="input-container">
         <label>Nome:</label>
         <input
           type="text"
@@ -54,7 +58,7 @@ setIsLoading(false);
           onChange={(e) => setNome(e.target.value)}
         />
       </div>
-      <div>
+      <div className="input-container">
         <label>Idade:</label>
         <input
           type="number"
@@ -62,7 +66,7 @@ setIsLoading(false);
           onChange={(e) => setIdade(e.target.value)}
         />
       </div>
-      <div>
+      <div className="input-container">
         <label>Número de Telefone:</label>
         <input
           type="text"
@@ -70,11 +74,26 @@ setIsLoading(false);
           onChange={(e) => setTelefone(e.target.value)}
         />
       </div>
-      <Link to= "/pesquisa">
-      <button onClick={handleAddContact}>
-      {isLoading ? 'Cadastrando...' : 'Cadastrar'}</button>
+      <Link to="/pesquisa">
+        <button
+          className="button"
+          onClick={handleAddContact}
+          disabled={isLoading}
+        >
+          {isLoading ? 'Cadastrando...' : 'Cadastrar'}
+        </button>
       </Link>
-      
+      <div className='redes'>
+        <div ><a href="https://www.instagram.com/tiago_abranges/" target="_blank">
+        <AiOutlineInstagram id='insta' size={32} />
+      </a></div>
+        <div ><a href="https://www.linkedin.com/in/tiagoabranges/" target="_blank">
+        <AiOutlineLinkedin id='linkedin' size={32} />
+      </a></div>
+        <div><a href="https://github.com/Tiagoabranges" target="_blank">
+        <AiOutlineGithub id='git' size={32} />
+      </a></div>
+      </div>
     </div>
   );
 };

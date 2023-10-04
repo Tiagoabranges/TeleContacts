@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import axios from "axios";
 import { filtrarContatosPorNomeOuNumero } from "../utils";
 import { Card } from "../components/Card/Card";
+import './pesquisa.css';
 
 const PesquisaContatos = () => {
   const [pesquisa, setPesquisa] = useState("");
@@ -54,17 +55,19 @@ const PesquisaContatos = () => {
   return (
     <div className="pesquisa-contatos">
       <Link to="/">
-        <button>voltar</button>
+        <button id="back-button"></button>
       </Link>
+      <div className="pesquisa">
       <h2>Pesquisar Contatos</h2>
       <div>
         <input
+        id="pesquisa-por-nome"
           type="text"
           placeholder="Pesquisar por nome ou telefone"
           value={pesquisa}
           onChange={(e) => setPesquisa(e.target.value)}
         />
-        <button
+        <button id="botao-pesquisa"
           onClick={() =>
             setResultadosFiltrados(
               filtrarContatosPorNomeOuNumero(data, pesquisa)
@@ -74,7 +77,7 @@ const PesquisaContatos = () => {
           Pesquisar
         </button>
       </div>
-      <div>
+      <div className="resultado">
         <h3>Resultados da Pesquisa:</h3>
         <ul>
           {resultadosFiltrados.map((value) => (
@@ -94,6 +97,7 @@ const PesquisaContatos = () => {
             </>
           ))}
         </ul>
+      </div>
       </div>
     </div>
   );

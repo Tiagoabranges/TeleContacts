@@ -1,8 +1,7 @@
 
 import { Route, Routes } from 'react-router-dom';
-import CadastroContatos from './pages/cadastro';
+import CadastroContatos from './pages/registro';
 import PesquisaContatos from './pages/pesquisa';
-import './styles.css';
 
 
 function App() {

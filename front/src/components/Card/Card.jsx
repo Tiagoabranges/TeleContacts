@@ -1,5 +1,5 @@
 import { useState } from "react";
-
+import './style.css';
 export function Card({
   nome,
   idade,
@@ -14,44 +14,52 @@ export function Card({
   const [modoEditar, setModoEditar] = useState(true);
 
   return (
-    <div>
-      <input
-        disabled={modoEditar}
-        type="text"
-        onChange={({ target }) => {
-          setValorNome(target.value);
+    <div className="card">
+    <input
+      className="card-input"
+      disabled={modoEditar}
+      type="text"
+      onChange={({ target }) => {
+        setValorNome(target.value);
+      }}
+      value={valorNome}
+    />
+    <input
+      className="card-input"
+      disabled={modoEditar}
+      type="text"
+      onChange={({ target }) => {
+        setValorIdade(target.value);
+      }}
+      value={valorIdade}
+    />
+    <input
+      className="card-input"
+      disabled
+      type="text"
+      onChange={({ target }) => {
+        setValorNumero(target.value);
+      }}
+      value={valorNumero}
+    />
+    <button id="card-button-editar" onClick={() => setModoEditar(!modoEditar)}>
+      Editar
+    </button>
+    <button id="card-excluir" onClick={excluirContato}>
+      Excluir
+    </button>
+    {!modoEditar && (
+      <button
+        id="card-button-salvar"
+        onClick={() => {
+          setModoEditar(!modoEditar);
+          editarContato(id, { valorIdade, valorNome });
         }}
-        value={valorNome}
-      />
-      <input
-        disabled={modoEditar}
-        type="text"
-        onChange={({ target }) => {
-          setValorIdade(target.value);
-        }}
-        value={valorIdade}
-      />
-      <input
-        disabled
-        type="text"
-        onChange={({ target }) => {
-          setValorNumero(target.value);
-        }}
-        value={valorNumero}
-      />
-      <button onClick={() => setModoEditar(!modoEditar)}>Editar</button>
-      <button onClick={excluirContato}>Excluir</button>
-      {!modoEditar && (
-        <button
-          onClick={() =>{
-            setModoEditar(!modoEditar)
-            editarContato(id, { valorIdade, valorNome })
-        }}
-            
-        >
-          Salvar
-        </button>
-      )}
-    </div>
+      >
+        Salvar
+      </button>
+    )}
+  </div>
+  
   );
 }

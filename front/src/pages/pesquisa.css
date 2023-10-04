@@ -1,0 +1,177 @@
+* {
+  font-family: 'Cursive', cursive; /* Altera a fonte para uma fonte mais rústica */
+}
+
+.pesquisa-contatos input {
+  margin-right: 5px;
+    width: 75%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: beige;
+    color: #2b2828;
+    font-family: 'Cursive', cursive;
+    font-size: 16px;
+    margin-bottom: 16px; /* Adiciona espaçamento maior entre os inputs */
+  }
+
+  /* Estilo para o botão de pesquisa */
+  .pesquisa-contatos button {
+    font-family: 'Cursive', cursive;
+    background-color: #867fd4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    padding: 7px 15px;
+  }
+  
+  #voltar {
+    margin-top: 11px;
+    margin-left: 11px;
+    padding: 7px 15px;
+    font-family: 'Cursive', cursive;
+
+  }
+ /* Estilize o botão */
+/* Estilize o botão */
+#back-button {
+  margin-top: 8px;
+    margin-left: 8px;
+  font-size: 16px; /* Tamanho menor */
+  cursor: pointer;
+  padding: 8px 20px; /* Ajuste o espaço entre a seta e a borda do botão */
+  background-color: #867fd4;
+  color: #fff;
+  border-radius: 5px;
+  align-items: center; /* Centralize verticalmente o conteúdo */
+  padding: 0px 6px 6px 6px
+}
+
+/* Adicione uma seta para a esquerda como conteúdo do botão */
+#back-button::before {
+  content: "\2190"; /* Código Unicode da seta para a esquerda */
+  padding: 5px;
+    margin-right: 2px;
+  font-size: 31px; /* Tamanho da seta maior */
+  text-shadow: none !important; /* Remova o sombreamento da seta */
+}
+
+/* Estilize o botão quando o mouse passar por cima */
+#back-button:hover {
+  background-color: #dc141478;
+  transition: background-color 0.3s ease; /* Efeito de transição suave na cor de fundo */
+  transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+}
+
+
+  /* Efeito de hover para o botão de pesquisa */
+  .pesquisa-contatos button:hover {
+    background-color: #05491aa0;
+  }
+
+/* Estilize a div de pesquisa de contatos */
+.pesquisa-contatos {
+  background-color: #f5f5f5; /* Cor de fundo da área de pesquisa */
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+  height: 100vh; /* Altura total da viewport */
+  overflow-y: auto; /* Adicione uma barra de rolagem quando necessário */
+  
+}
+
+/* Restante do seu estilo para .pesquisa-contatos */
+
+  .pesquisa {
+    
+    margin: 5px;
+  }
+
+/* Estilize a div de pesquisa de contatos */
+.pesquisa-contatos {
+  margin-top: 50px;
+  background-color: beige;
+  padding: 20px; /* Espaçamento interno */
+  border-radius: 5px; /* Bordas arredondadas */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+/* Estilize o título "Pesquisar Contatos" */
+.pesquisa h2 {
+  font-size: 24px; /* Tamanho da fonte do título */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estilize o campo de entrada e o botão de pesquisa */
+.pesquisa input[type="text"],
+.pesquisa button {
+  border: 1px solid #716c6c94;
+  margin: 8px;
+  padding: 10px; /* Espaçamento interno dos elementos de entrada e botão */
+  margin-right: 10px; /* Espaçamento entre os elementos */
+  border-radius: 5px; /* Bordas arredondadas */
+  background-color: #d6d6d7ae;
+
+}
+#pesquisa-por-nome:hover {
+  border-color: #3628ff; /* Cor da borda amarela no hover */
+}
+#pesquisa-por-nome:focus {
+  border-color: #0f07ff; /* Cor da borda amarela quando em foco */
+  outline: none; /* Remove a borda padrão do navegador */
+  box-shadow: 0 0 6px rgba(86, 84, 226, 0.5); /* Adiciona uma sombra sutil */
+}
+#pesquisa-por-nome {
+  transition: border-color 0.3s ease;
+}
+
+/* Estilize o botão de pesquisa */
+#botao-pesquisa {
+
+ font-family: 'Cursive', cursive;
+    background-color: #867fd4;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    padding: 7px 15px;
+}
+#botao-pesquisa:hover {
+  background-color: #05491aa0;
+  transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
+  transition: background-color 0.3s ease; /* Efeito de transição suave na cor de fundo */
+  
+}
+
+/* Estilize os resultados da pesquisa */
+.resultado {
+  margin-top: 20px; /* Espaçamento superior */
+}
+
+.resultado h3 {
+  font-size: 18px; /* Tamanho da fonte do título dos resultados */
+  margin-bottom: 10px; /* Espaçamento inferior */
+}
+
+/* Estilize a lista de resultados */
+.resultado ul {
+  list-style-type: none; /* Remova os marcadores de lista */
+  padding: 0; /* Remova o preenchimento da lista */
+}
+
+/* Estilize cada item de resultado (Card) */
+.resultado .card {
+  background-color: #fff; /* Cor de fundo do Card */
+  padding: 10px; /* Espaçamento interno do Card */
+  margin-bottom: 10px; /* Espaçamento inferior entre os Cards */
+  border: 1px solid #ddd; /* Borda leve ao redor do Card */
+  border-radius: 5px; /* Bordas arredondadas do Card */
+}
+
