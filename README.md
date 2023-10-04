@@ -65,4 +65,4 @@ Se você encontrar algum problema, por favor me avise [aqui](https://www.linkedi
 
 
 # 📝 Licença
-Desenvolvido por [Tiago Abranges](https://www.linkedin.com/in/tiagoabranges/)
+Desenvolvido por [Tiago Abranges](https://www.linkedin.com/in/tiagoabranges/).
