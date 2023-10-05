@@ -1,16 +1,14 @@
-
-import { Route, Routes } from 'react-router-dom';
-import CadastroContatos from './pages/registro';
-import PesquisaContatos from './pages/pesquisa';
-
+import { Route, Routes } from "react-router-dom";
+import RegisterContact from "./pages/Register";
+import SearchContact from "./pages/Search/index.";
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={ <CadastroContatos /> } />
-      <Route path="/pesquisa" element={ <PesquisaContatos /> } />
+      <Route path="/" element={<RegisterContact />} />
+      <Route path="/pesquisa" element={<SearchContact />} />
     </Routes>
-  )
+  );
 }
 
 export default App;

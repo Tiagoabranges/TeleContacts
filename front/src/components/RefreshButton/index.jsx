@@ -3,7 +3,6 @@ import { FaSync } from 'react-icons/fa';
 import './index.css'
 class RefreshButton extends React.Component {
   handleRefresh = () => {
-    // Recarrega a página
     window.location.reload();
   };
 

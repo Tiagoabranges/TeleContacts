@@ -1,65 +1,57 @@
 import { useState } from "react";
-import './style.css';
-export function Card({
-  nome,
-  idade,
-  numero,
-  excluirContato,
-  editarContato,
-  id,
-}) {
-  const [valorNome, setValorNome] = useState(nome);
-  const [valorIdade, setValorIdade] = useState(idade);
-  const [valorNumero, setValorNumero] = useState(numero);
-  const [modoEditar, setModoEditar] = useState(true);
-
+import "./style.css";
+export function Card({ name, age, phone, deleteContact, editContact, id }) {
+  const [nameValue, setNameValue] = useState(name);
+  const [ageValue, setAgeValue] = useState(age);
+  const [phoneValue, setPhoneValue] = useState(phone);
+  const [editMode, setEditMode] = useState(true);
+console.log(phoneValue);
   return (
     <div className="card">
-    <input
-      className="card-input"
-      disabled={modoEditar}
-      type="text"
-      onChange={({ target }) => {
-        setValorNome(target.value);
-      }}
-      value={valorNome}
-    />
-    <input
-      className="card-input"
-      disabled={modoEditar}
-      type="text"
-      onChange={({ target }) => {
-        setValorIdade(target.value);
-      }}
-      value={valorIdade}
-    />
-    <input
-      className="card-input"
-      disabled
-      type="text"
-      onChange={({ target }) => {
-        setValorNumero(target.value);
-      }}
-      value={valorNumero}
-    />
-    <button id="card-button-editar" onClick={() => setModoEditar(!modoEditar)}>
-      Editar
-    </button>
-    <button id="card-excluir" onClick={excluirContato}>
-      Excluir
-    </button>
-    {!modoEditar && (
-      <button
-        id="card-button-salvar"
-        onClick={() => {
-          setModoEditar(!modoEditar);
-          editarContato(id, { valorIdade, valorNome });
+      <input
+        className="card-input"
+        disabled={editMode}
+        type="text"
+        onChange={({ target }) => {
+          setNameValue(target.value);
         }}
-      >
-        Salvar
+        value={nameValue}
+      />
+      <input
+        className="card-input"
+        disabled={editMode}
+        type="text"
+        onChange={({ target }) => {
+          setAgeValue(target.value);
+        }}
+        value={ageValue}
+      />
+      <input
+        className="card-input"
+        disabled
+        type="text"
+        onChange={({ target }) => {
+          setPhoneValue(target.value);
+        }}
+        value={phoneValue}
+      />
+      <button id="card-button-editar" onClick={() => setEditMode(!editMode)}>
+        Editar
       </button>
-    )}
-  </div>
-  
+      <button id="card-excluir" onClick={deleteContact}>
+        Excluir
+      </button>
+      {!editMode && (
+        <button
+          id="card-button-salvar"
+          onClick={() => {
+            setEditMode(!editMode);
+            editContact(id, { ageValue, nameValue });
+          }}
+        >
+          Salvar
+        </button>
+      )}
+    </div>
   );
 }

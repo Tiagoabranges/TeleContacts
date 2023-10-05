@@ -1,11 +1,13 @@
-export function filtrarContatosPorNomeOuNumero(listaDeContatos, filtro) {
-    filtro = filtro.toLowerCase();
-  
-    return listaDeContatos.filter(contato => {
-      const nomeEmMinusculas = contato.nome.toLowerCase();
-      const numeros = contato.numeros.map(numeroObj => numeroObj.numero);
-      
-  
-      return nomeEmMinusculas.includes(filtro) || numeros.some(numero => numero.includes(filtro));
-    });
-  }
+export function filterContactsByNameOrNumber(contactList, filter) {
+  filter = filter.toLowerCase();
+
+  return contactList.filter((contact) => {
+    const nameInLowercase = contact.name.toLowerCase();
+    const Phones = contact.phones.map((phoneObj) => phoneObj.phone);
+
+    return (
+      nameInLowercase.includes(filter) ||
+      Phones.some((phone) => phone.includes(filter))
+    );
+  });
+}

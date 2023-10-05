@@ -1,23 +1,21 @@
 #atualizar {
-    position: relative;
-    margin-left: 5vh;
-    margin-left: 2px;
-    font-family: 'Cursive', cursive;
-       background-color: #867fd4;
-       color: white;
-       padding: 10px 20px;
-       border: none;
-       border-radius: 4px;
-       cursor: pointer;
-       transition: background-color 0.3s ease;
-   
-       padding: 7px 15px;
-  }
-  #atualizar:hover {
-    background-color: #05491aa0;
-    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
-    transition: background-color 0.3s ease; /* Efeito de transição suave na cor de fundo */
-  }
-  
-  
-  
+  position: relative;
+  margin-left: 5vh;
+  margin-left: 2px;
+  font-family: 'Cursive', cursive;
+  background-color: #867fd4;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+
+  padding: 7px 15px;
+}
+
+#atualizar:hover {
+  background-color: #05491aa0;
+  transform: scale(1.05);
+  transition: background-color 0.3s ease;
+}

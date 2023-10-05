@@ -1,4 +1,3 @@
-/* Estilize o Card */
 .card {
     background-color: #fff;
     padding: 10px;
@@ -10,73 +9,66 @@
     align-items: center;
 }
 
-/* Estilize os inputs dentro do Card para diminuir o tamanho */
 .card input[type="text"] {
-    padding: 5px; /* Espaçamento interno menor */
-    font-size: 14px; /* Tamanho de fonte menor */
+    padding: 5px;
+    font-size: 14px;
 }
-/* Estilize o título do Card */
+
 .card h2 {
-    font-size: 18px; /* Tamanho da fonte do título */
-    margin-bottom: 5px; /* Espaçamento inferior do título */
+    font-size: 18px;
+    margin-bottom: 5px;
 }
 
-/* Estilize o número no Card */
 .card .numero {
-    font-size: 14px; /* Tamanho da fonte do número */
-    color: #555; /* Cor do número */
+    font-size: 14px;
+    color: #555;
 }
 
-/* Estilize o botão de excluir dentro do Card */
 #card-excluir {
-    background-color: #eb1b0c90; /* Cor de fundo do botão de excluir */
-    color: #fff; /* Cor do texto do botão de excluir */
-    border: none; /* Remova as bordas do botão de excluir */
-    padding: 5px 10px; /* Espaçamento interno do botão de excluir */
-    border-radius: 3px; /* Bordas arredondadas do botão de excluir */
+    background-color: #eb1b0c90;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
 #card-excluir:hover {
     background-color: #ff0101fd;
-    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
-    transition: background-color 0.3s ease; /* Efeito de transição suave na cor de fundo */
+    transform: scale(1.05);
+    transition: background-color 0.3s ease;
 }
 
-#card-button-editar{
-    background-color: #072cfd9d; /* Cor de fundo do botão de excluir */
-    color: #fff; /* Cor do texto do botão de excluir */
-    border: none; /* Remova as bordas do botão de excluir */
-    padding: 5px 10px; /* Espaçamento interno do botão de excluir */
-    border-radius: 3px; /* Bordas arredondadas do botão de excluir */
+#card-button-editar {
+    background-color: #072cfd9d;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
     cursor: pointer;
 }
-#card-button-editar:hover{
+
+#card-button-editar:hover {
     background-color: #1100ff;
-    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
-    transition: background-color 0.3s ease; /* Efeito de transição suave na cor de fundo */
-} 
+    transform: scale(1.05);
+    transition: background-color 0.3s ease;
+}
 
 #card-button-salvar {
-    background-color: #02990fb2; /* Cor de fundo do botão de excluir */
-    color: #fff; /* Cor do texto do botão de excluir */
-    border: none; /* Remova as bordas do botão de excluir */
-    padding: 5px 10px; /* Espaçamento interno do botão de excluir */
-    border-radius: 3px; /* Bordas arredondadas do botão de excluir */
+    background-color: #02990fb2;
+    color: #fff;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 3px;
     cursor: pointer;
 }
 
 #card-button-salvar:hover {
     background-color: #07a30c;
-    transform: scale(1.05); /* Aumenta um pouco o tamanho no hover */
-    transition: background-color 0.3s ease; /* Efeito de transição suave na cor de fundo */
-}
-
-.card input[type="text"] {
-    padding: 5px; /* Espaçamento interno menor */
-    font-size: 14px; /* Tamanho de fonte menor */
+    transform: scale(1.05);
+    transition: background-color 0.3s ease;
 }
 
 .card input[type="text"]:not([disabled]) {
-    background-color: #0ad9523c; /* Cor de fundo quando estiver em modo de edição */
+    background-color: #0ad9523c;
 }
