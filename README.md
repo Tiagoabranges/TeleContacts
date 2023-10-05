@@ -38,6 +38,8 @@ Altere os dados do banco postgres no arquivo `.env` e remova a extensao example
   4. `$ npm run start:dev`
 
 ```
+[Passo a Passo: Como criar e executar um container Postgres com Docker](https://www.gasparbarancelli.com/post/passo-a-passo-como-criar-e-executar-um-container-postgres-com-docker)
+
 
 # :books: Tecnologias Utilizadas
 
