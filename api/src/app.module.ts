@@ -1,9 +1,8 @@
 import { Module } from '@nestjs/common';
-import { ContatoModule } from './modules/contato/contato.module';
-import { NumeroModule } from './modules/numero/numero.module';
-
+import { ContactModule } from './modules/Contact/Contact.module';
+import { PhoneModule } from './modules/Phone/Phone.module';
 @Module({
-  imports: [ContatoModule, NumeroModule],
+  imports: [ContactModule, PhoneModule],
   controllers: [],
   providers: [],
 })
