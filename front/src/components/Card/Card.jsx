@@ -5,7 +5,6 @@ export function Card({ name, age, phone, deleteContact, editContact, id }) {
   const [ageValue, setAgeValue] = useState(age);
   const [phoneValue, setPhoneValue] = useState(phone);
   const [editMode, setEditMode] = useState(true);
-console.log(phoneValue);
   return (
     <div className="card">
       <input

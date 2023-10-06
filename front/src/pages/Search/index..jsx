@@ -11,12 +11,6 @@ const SearchContact = () => {
   const [data, setData] = useState([]);
   const [filterResults, setFilterResults] = useState([]);
 
-  console.log(data);
-  console.log(filterResults);
-
-  useEffect(() => {
-    console.log("Isso será executado uma vez!");
-  }, []);
   useEffect(() => {
     axios
       .get("http://localhost:3000/contact")
@@ -32,7 +26,6 @@ const SearchContact = () => {
   }, []);
 
   useEffect(() => {
-    // Atualize filterResults sempre que data ou search mudar
     setFilterResults(filterContactsByNameOrNumber(data, search));
   }, [data, search]);
 
@@ -40,11 +33,8 @@ const SearchContact = () => {
     axios
       .delete(`http://localhost:3000/contact/${id}`)
       .then(() => {
-        // Atualize o estado de data
         const contactsUpdated = data.filter((contact) => contact.id !== id);
         setData(contactsUpdated);
-
-        // Atualize o estado de filterResults
         setFilterResults(filterContactsByNameOrNumber(contactsUpdated, search));
       })
       .catch((error) => {
@@ -82,7 +72,6 @@ const SearchContact = () => {
       console.error("Erro ao editar o contato:", error);
     }
   };
-
 
   return (
     <div className="pesquisa-contatos">

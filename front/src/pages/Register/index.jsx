@@ -1,7 +1,5 @@
 import axios from "axios";
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import Button from "@mui/material/Button";
 import "./register.css";
 import {
   AiOutlineInstagram,
@@ -9,7 +7,6 @@ import {
   AiOutlineGithub,
 } from "react-icons/ai";
 
-// eslint-disable-next-line react/prop-types
 const RegisterContact = () => {
   const [name, setName] = useState("");
   const [age, setAge] = useState();
@@ -38,11 +35,8 @@ const RegisterContact = () => {
       });
       const updatedPhones = response2.data.phone;
 
-// Atualize o estado com os números de telefone
-setPhone(updatedPhones);
-window.location.href = '/pesquisa';
-console.log('Resultado da segunda chamada:', response2.data.phone);
-
+      setPhone(updatedPhones);
+      window.location.href = "/pesquisa";
     } catch (error) {
       console.error("An error occurred:", error);
       setError("An error occurred while registering the contact.");
@@ -50,7 +44,6 @@ console.log('Resultado da segunda chamada:', response2.data.phone);
       setIsLoading(false);
     }
   }
-  console.log(phone);
 
   return (
     <div className="container">
@@ -81,15 +74,15 @@ console.log('Resultado da segunda chamada:', response2.data.phone);
           onChange={(e) => setPhone(e.target.value)}
         />
       </div>
-    
-        <button
-          className="button"
-          onClick={handleAddContact}
-          disabled={isLoading}
-        >
-          {isLoading ? "Cadastrando..." : "Cadastrar"}
-        </button>
-      
+
+      <button
+        className="button"
+        onClick={handleAddContact}
+        disabled={isLoading}
+      >
+        {isLoading ? "Cadastrando..." : "Cadastrar"}
+      </button>
+
       <div className="redes">
         <div>
           <a href="https://www.instagram.com/tiago_abranges/" target="_blank">
