@@ -16,7 +16,7 @@
  - Primeiro clone o repositório:
     - ``` git@github.com:Tiagoabranges/TeleContacts.git ```
  - Entre no repositório: 
-   - ``` cd davinti ```
+   - ``` cd TeleContacts ```
 
 
 ### Front end
