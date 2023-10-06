@@ -14,7 +14,7 @@
 
 ```bash
  - Primeiro clone o repositório:
-    - ``` git@github.com:Tiagoabranges/davinti.git ```
+    - ``` git@github.com:Tiagoabranges/TeleContacts.git ```
  - Entre no repositório: 
    - ``` cd davinti ```
 
