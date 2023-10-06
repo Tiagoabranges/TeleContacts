@@ -2,7 +2,6 @@ import { Injectable } from '@nestjs/common';
 import { ContactDto } from './Dto/Contact.dto';
 import { PrismaService } from 'src/database/PrismaService';
 import { CreateUserDto } from './Dto/CreateContactDto';
-// eslint-disable-next-line @typescript-eslint/no-var-requires
 const fs = require('fs');
 
 @Injectable()
@@ -10,13 +9,13 @@ export class ContactService {
   constructor(private prisma: PrismaService) {}
 
   async create(data: CreateUserDto) {
-    const contactExiste = await this.prisma.contact.findFirst({
+    const contactExist = await this.prisma.contact.findFirst({
       where: {
         name: data.name,
       },
     });
 
-    if (contactExiste) {
+    if (contactExist) {
       throw new Error('Existing contact');
     }
     const contact = await this.prisma.contact.create({
@@ -68,7 +67,6 @@ export class ContactService {
       throw new Error('contact does not exist');
     }
 
-    // Registre o evento de exclusão no log
     const msgLog = `contact ID ${id} It was excluded.`;
     this.registerLog(msgLog);
 
@@ -79,10 +77,9 @@ export class ContactService {
     });
   }
 
-  // Função para registrar eventos em um arquivo de log
   registerLog(msg) {
-    const dataAtual = new Date().toLocaleString();
-    const log = `${dataAtual}: ${msg}\n`;
+    const currentDate = new Date().toLocaleString();
+    const log = `${currentDate}: ${msg}\n`;
 
     fs.appendFile('contacts.log', log, (err) => {
       if (err) {
